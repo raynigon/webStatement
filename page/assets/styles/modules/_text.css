@@ -25,6 +25,21 @@
   }
 }
 
+.ref {
+  font-size:  1rem;
+
+  &__number {
+    font-weight: bold;
+  }
+  &__title {
+    font-style: italic;
+    /* font-weight: bold; */
+  }
+  /* &__journal {
+    font-weight: italic;
+  } */
+}
+
 .list-minor {
   list-style-position: inside;
   counter-reset: list;

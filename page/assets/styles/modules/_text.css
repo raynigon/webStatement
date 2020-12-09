@@ -40,6 +40,17 @@
   } */
 }
 
+.sign {
+  &__name {
+    font-weight: bold;
+    font-size: 1rem;
+  }
+
+  &__affiliation {
+    font-size: 0.8rem;
+  }
+}
+
 .title {
   color: black;
 }

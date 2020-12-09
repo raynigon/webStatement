@@ -1,6 +1,6 @@
 import Papa from 'papaparse';
 
-function csvToList_authors(tableData) {
+function csvToList_authors(tableData,idx_start=null,idx_end=null) {
       var author_all = $("<p></p>");
       $(tableData).each(function (i,rowData) {
           var author = '<a class="author__name" title="' + rowData.Affiliation + '" href="#">' + rowData.Name;
@@ -12,7 +12,7 @@ function csvToList_authors(tableData) {
       return author_all;
 }
 
-function csvToList_references(tableData) {
+function csvToList_references(tableData,idx_start=null,idx_end=null) {
       var reference_all = $('<ul style="list-style: none;"></ul>');
       $(tableData).each(function (i,rowData) {
         // console.log(rowData)
@@ -32,23 +32,40 @@ function csvToList_references(tableData) {
           reference.append(
             $(' <span class="ref ref__year">'+rowData.Journal+'</span>')
           )
-          // console.log(reference)
           reference_all.append(reference)
       });
-      // console.log(reference_all)
       return reference_all;
 }
 
+function csvToList_signatories(tableData,idx_start=null,idx_end=null) {
+      var reference_all = $('<ul style="list-style: none; text-align: left; line-height:2"></ul>');
+      $(tableData).each(function (i,rowData) {
+        // console.log(rowData)
+          if ((i>=idx_start) & (i<idx_end)) {
+            var reference = $('<li></li>');
+            reference.append(
+              $('<span>['+(i+1)+'] </span> ')
+            )
+            reference.append(
+              $('<span class="sign sign__name">'+rowData.Name+', </span>')
+            )
+            reference.append(
+              $(' <span class="sign sign__affiliation">'+rowData.Affiliation+', </span>')
+            )
+            reference_all.append(reference)
+          }
+      });
+      return reference_all;
+}
+
+
 class generateList {
 
-  constructor(type,dom_ref) {
+  constructor(type,dom_ref,idx_start=null,idx_end=null) {
     var data_file = './data/' + type + '.csv'
     if (type=='authors') var csvToList = csvToList_authors;
     else if (type=='references') var csvToList = csvToList_references;
     else if (type=='signatories') var csvToList = csvToList_signatories;
-    console.log(type)
-    console.log(dom_ref)
-    console.log(csvToList)
     $.ajax({
         type: "GET",
         url: data_file,
@@ -58,7 +75,7 @@ class generateList {
                         delimiter: ";",
                         header: true,
                         skipEmptyLines: true,
-                      }).data),
+                      }).data,idx_start,idx_end),
             console.log('success')
             )
         }

@@ -3,8 +3,11 @@ import Papa from 'papaparse';
 function csvToList_authors(tableData) {
       var author_all = $("<p></p>");
       $(tableData).each(function (i,rowData) {
-          var author = $('<a class="author__name" title="' + rowData.Affiliation + '" href="#">' + rowData.Name + ', </a>');
-          author_all.append(author)
+          var author = '<a class="author__name" title="' + rowData.Affiliation + '" href="#">' + rowData.Name;
+
+          if (i<(tableData.length-1)) author = author + ', </a>'
+          else author = author + '</a>'
+          author_all.append($(author))
       });
       return author_all;
 }

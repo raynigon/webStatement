@@ -1,7 +1,9 @@
 body {
-  font-size:  1.5rem;
+  font-size:  1.2rem;
   font-family:  Helvetica, sans-serif;
-  color: #333;
+  color: #485BD9;
+  background-color: #FFFAEB;
+  /* font-weight: 00; */
 }
 
 img {

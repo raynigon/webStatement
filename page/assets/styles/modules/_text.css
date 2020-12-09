@@ -1,0 +1,28 @@
+.author {
+
+  &__name {
+    font-weight: bold;
+    font-size:  1.2rem;
+  }
+
+  &__name:hover {
+    color: blue;
+    text-decoration: underline;
+  }
+
+  &__affiliation {
+    font-size: 0.8rem;
+  }
+}
+
+.list-minor {
+  list-style-position: inside;
+  counter-reset: list;
+}
+.list-minor > li {
+  list-style: none;
+}
+.list-minor > li:before {
+  content: "(" counter(list, lower-roman) ") ";
+  counter-increment: list;
+}

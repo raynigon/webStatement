@@ -1,9 +1,7 @@
 @import "normalize.css";
 @import "base/_global";
 @import "base/_variables";
-@import "modules/_authors";
-@import "modules/_statement";
-@import "modules/_references";
+@import "modules/_text";
 @import "modules/_buttons";
 @import "modules/_container";
 /* @import "modules/_languageCarousel"; */

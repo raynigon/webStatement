@@ -1,3 +1,13 @@
-.container-global {
-  max-width:  800px;
+.container {
+  &__global {
+    max-width:  900px;
+  }
+
+  &__authors {
+    max-width: 1000px;
+  }
+
+  &__statement {
+    max-width: 800px;
+  }
 }

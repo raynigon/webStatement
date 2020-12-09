@@ -1,10 +1,18 @@
 import Papa from 'papaparse';
 
 function arrayToTable(tableData) {
-      var author_all = $("<ul></ul>");
+      // var author_all = $("<ul></ul>");
+      // $(tableData).each(function (i, rowData) {
+      //     var author = $('<li></li>')
+          // author.append($('<span class="author__name">'+rowData.Name+'</span>, <span class="author__affiliation">'+rowData.Affiliation+'</span>'));
+      //     // , <span class="author__affiliation">'+rowData.Affiliation+'</span>'));
+      //     author_all.append(author)
+      // });
+      // return author_all;
+
+      var author_all = $("<p></p>");
       $(tableData).each(function (i, rowData) {
-          var author = $('<li></li>')
-          author.append($('<span class="author__name">'+rowData.Name+'</span>, <span class="author__affiliation">'+rowData.Affiliation+'</span>'));
+          var author = $('<a class="author__name" title="' + rowData.Affiliation + '" href="#">' + rowData.Name+', </span>');
           author_all.append(author)
       });
       return author_all;

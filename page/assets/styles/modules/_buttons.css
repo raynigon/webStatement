@@ -1,0 +1,35 @@
+.button {
+  /* background-color:   white; */
+  /* margin:             5px; */
+  padding:            5px;
+  /* border:             none */
+
+  &__language {
+    fontsize:           2rem;
+    border:             none;
+    color:              grey;
+    background-color:   white;
+    width:              15%;
+  }
+
+  &__active {
+    color:         black;
+  }
+
+  &__toggle-authors {
+    border: none;
+    color: blue;
+  }
+
+  .toggle__authors a:before {
+   font-family: 'Glyphicons Halflings';
+   content: "\e114";
+   float: right;
+   transition: all 0.5s;
+  }
+  .toggle__authors.collapsed a:before {
+  	-webkit-transform: rotate(180deg);
+  	-moz-transform: rotate(180deg);
+  	transform: rotate(180deg);
+  }
+}

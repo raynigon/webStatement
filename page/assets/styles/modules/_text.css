@@ -1,14 +1,24 @@
 .author {
 
   &__name {
-    font-weight: bold;
+    font-weight: normal;
     font-size:  1.2rem;
+    color: black;
   }
 
   &__name:hover {
-    color: blue;
+    color: black;
     text-decoration: underline;
+    font-weight: bold;
   }
+
+  &__name[title]:after {
+  content: attr(title);
+  position: absolute;
+  top: -100%;
+  left: 0;
+  font-size: 2rem;
+}
 
   &__affiliation {
     font-size: 0.8rem;

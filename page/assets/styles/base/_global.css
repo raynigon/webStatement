@@ -1,8 +1,8 @@
 body {
-  font-size:  1.2rem;
+  font-size:  1.0rem;
   font-family:  Helvetica, sans-serif;
-  color: #485BD9;
-  background-color: #FFFAEB;
+  color: black;
+  background-color: $mainYellow;
   /* font-weight: 00; */
 }
 

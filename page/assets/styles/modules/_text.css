@@ -40,9 +40,14 @@
   } */
 }
 
+.title {
+  color: black;
+}
+
 .list-minor {
   list-style-position: inside;
   counter-reset: list;
+  padding-left: 0px;
 }
 .list-minor > li {
   list-style: none;

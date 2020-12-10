@@ -30,7 +30,7 @@ function csvToList_references(tableData,idx_start=null,idx_end=null) {
             )}
           if (rowData.Link.length>0) {
             reference.append(
-              $(' <span class="ref ref__title"><a class="ref__title-link" href="'+rowData.Link+'" target="_blank">'+rowData.Title+'</a>, </span>')
+              $(' <span class="ref ref__title"><a class="ref__title-link" href="'+rowData.Link+'">'+rowData.Title+'</a>, </span>')
             )}
           else {
             reference.append(
@@ -42,27 +42,6 @@ function csvToList_references(tableData,idx_start=null,idx_end=null) {
               $(' <span class="ref ref__year">'+rowData.Journal+'</span>')
             )}
           reference_all.append(reference)
-      });
-      return reference_all;
-}
-
-function csvToList_signatories(tableData,idx_start=null,idx_end=null) {
-      var reference_all = $('<ul style="list-style: none; text-align: left; line-height:2"></ul>');
-      $(tableData).each(function (i,rowData) {
-        // console.log(rowData)
-          if ((i>=idx_start) & (i<idx_end)) {
-            var reference = $('<li></li>');
-            reference.append(
-              $('<span>['+(i+1)+'] </span> ')
-            )
-            reference.append(
-              $('<span class="sign sign__name">'+rowData.Name+', </span>')
-            )
-            reference.append(
-              $(' <span class="sign sign__affiliation">'+rowData.Affiliation+', </span>')
-            )
-            reference_all.append(reference)
-          }
       });
       return reference_all;
 }

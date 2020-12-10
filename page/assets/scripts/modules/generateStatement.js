@@ -1,7 +1,8 @@
 
 class generateStatement {
-  constructor() {
-    $("#text__statement").load("./data/statement_GER.html")
+  constructor(language) {
+    var data_load = "./data/statement_"+language+".html";
+    $("#text__statement").load(data_load)
   }
 }
 

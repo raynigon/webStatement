@@ -1,13 +1,16 @@
 import '../styles/styles.css'
 import './modules/carousel'
 import generateList from './modules/generateList'
+
+import addNav from './modules/addNav'
 import generateStatement from './modules/generateStatement'
 import generateSignatories from './modules/generateSignatories'
 
-
+let nav = new addNav()
+nav.addLangEvents()
 new generateList('authors',"#list__authors");
+new generateStatement("ENG")
 new generateList('references',"#list__references");
-new generateStatement();
 
 if (module.hot) {
   module.hot.accept()

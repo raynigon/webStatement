@@ -38,6 +38,11 @@
   &__title {
     font-style: italic;
   }
+
+  &__title-link {
+    color: black;
+    text-decoration: underline;
+  }
 }
 
 .sign {

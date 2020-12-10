@@ -1,0 +1,20 @@
+footer {
+  background-color: #3f3f3f;
+  color: #d5d5d5;
+  padding-top: 2rem;
+
+  p {
+    color: #d5d5d5;
+  }
+}
+
+hr.light {
+  border-top: 1px solid #d5d5d5;
+  width: 75%;
+  margin-top: .8rem;
+  margin-bottom: 1rem;
+
+  &__100 {
+    width: 100%;
+  }
+}

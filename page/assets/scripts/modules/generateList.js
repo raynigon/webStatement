@@ -20,18 +20,27 @@ function csvToList_references(tableData,idx_start=null,idx_end=null) {
           reference.append(
             $('<span class="ref ref__number">['+rowData.Number+'] </span>')
           )
-          reference.append(
-            $(' <span class="ref ref__authors">'+rowData.Authors+', </span>')
-          )
-          reference.append(
-            $(' <span class="ref ref__year">'+rowData.Year+', </span>')
-          )
-          reference.append(
-            $(' <span class="ref ref__title">'+rowData.Title+', </span>')
-          )
-          reference.append(
-            $(' <span class="ref ref__year">'+rowData.Journal+'</span>')
-          )
+          if (rowData.Authors.length>0) {
+            reference.append(
+              $(' <span class="ref ref__authors">'+rowData.Authors+', </span>')
+            )}
+          if (rowData.Year.length>0) {
+            reference.append(
+              $(' <span class="ref ref__year">'+rowData.Year+', </span>')
+            )}
+          if (rowData.Link.length>0) {
+            reference.append(
+              $(' <span class="ref ref__title"><a class="ref__title-link" href="'+rowData.Link+'">'+rowData.Title+'</a>, </span>')
+            )}
+          else {
+            reference.append(
+              $(' <span class="ref ref__title">'+rowData.Title+', </span>')
+            )
+          }
+          if (rowData.Journal.length>0) {
+            reference.append(
+              $(' <span class="ref ref__year">'+rowData.Journal+'</span>')
+            )}
           reference_all.append(reference)
       });
       return reference_all;

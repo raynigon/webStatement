@@ -60,9 +60,4 @@ for (i=0; i<4; i++) {
     });
 };
 
-
-
-
-
-
 export default generateSignatories;

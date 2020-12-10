@@ -16,10 +16,10 @@ $('#carousel-example').on('slide.bs.carousel', function (e) {
         for (var i=0; i<it; i++) {
             // append slides to end
             if (e.direction=="left") {
-                $('.carousel-item').eq(i).appendTo('.carousel-inner');
+                $('.carousel-lang-item').eq(i).appendTo('.carousel-languages');
             }
             else {
-                $('.carousel-item').eq(0).appendTo('.carousel-inner');
+                $('.carousel-lang-item').eq(0).appendTo('.carousel-languages');
             }
         }
     }

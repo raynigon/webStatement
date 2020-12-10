@@ -30,7 +30,7 @@ function csvToList_references(tableData,idx_start=null,idx_end=null) {
             )}
           if (rowData.Link.length>0) {
             reference.append(
-              $(' <span class="ref ref__title"><a class="ref__title-link" href="'+rowData.Link+'">'+rowData.Title+'</a>, </span>')
+              $(' <span class="ref ref__title"><a class="ref__title-link" href="'+rowData.Link+'" target="_blank">'+rowData.Title+'</a>, </span>')
             )}
           else {
             reference.append(

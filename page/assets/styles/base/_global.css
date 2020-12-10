@@ -1,6 +1,7 @@
 body {
   /* font-size:  1.0rem; */
   font-family:  Helvetica, sans-serif;
+  /* font-family:  Arial Narrow, Verdana, sans-serif; */
   color: black;
   background-color: $mainYellow;
 }

@@ -1,4 +1,5 @@
 @import "normalize.css";
+@import "base/_mixins";
 @import "base/_variables";
 @import "base/_global";
 @import "modules/_text";
@@ -7,5 +8,4 @@
 @import "modules/_navbar";
 @import "modules/_accordion";
 @import "modules/_signatories";
-/* @import "modules/_languageCarousel"; */
-/* @import "modules/carousel"; */
+@import "modules/_carousel";

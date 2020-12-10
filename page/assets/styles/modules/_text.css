@@ -2,8 +2,12 @@
 
   &__name {
     font-weight: normal;
-    font-size:  1.2rem;
+    font-size:  0.8rem;
     color: black;
+
+    @mixin atSmall {
+      font-size: 1.2rem;
+    }
   }
 
   &__name:hover {
@@ -33,11 +37,7 @@
   }
   &__title {
     font-style: italic;
-    /* font-weight: bold; */
   }
-  /* &__journal {
-    font-weight: italic;
-  } */
 }
 
 .sign {
@@ -51,9 +51,28 @@
   }
 }
 
+.statement {
+  font-size: 1.0rem;
+
+  @mixin atSmall {
+    font-size: 1.4rem;
+  }
+}
+
 .title {
   color: black;
+  font-size: 1.6rem;
+
+  @mixin atSmall {
+    font-size: 3.2rem;
+  }
+
 }
+/* @media (min-width:530px) {
+    .title {
+        font-size: 6.0rem;
+    }
+} */
 
 .list-minor {
   list-style-position: inside;

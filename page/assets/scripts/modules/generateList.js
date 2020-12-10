@@ -76,7 +76,6 @@ class generateList {
                         header: true,
                         skipEmptyLines: true,
                       }).data,idx_start,idx_end),
-            console.log('success')
             )
         }
     });

@@ -1,4 +1,5 @@
 import '../styles/styles.css'
+import './modules/carousel'
 import generateList from './modules/generateList'
 import generateStatement from './modules/generateStatement'
 import generateSignatories from './modules/generateSignatories'

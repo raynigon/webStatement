@@ -20,18 +20,16 @@
   },
   "homepage": "https://github.com/woxxel/webStatement#readme",
   "dependencies": {
-    "normalize.css": "^8.0.1",
-    "papaparse": "^5.3.0"
+    "normalize.css": "^8.0.1"
   },
   "devDependencies": {
     "autoprefixer": "^9.6.5",
     "css-loader": "^3.2.0",
     "papaparse": "^5.3.0",
-    "postcss": "^8.2.1",
-    "postcss-hexrgba": "^2.0.1",
+    "postcss-hexrgba": "^2.0.0",
     "postcss-import": "^12.0.1",
     "postcss-loader": "^3.0.0",
-    "postcss-mixins": "^7.0.2",
+    "postcss-mixins": "^6.2.2",
     "postcss-nested": "^4.1.2",
     "postcss-simple-vars": "^5.0.2",
     "style-loader": "^1.0.0",

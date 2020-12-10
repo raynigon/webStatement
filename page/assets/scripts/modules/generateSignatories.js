@@ -2,7 +2,7 @@ import Papa from 'papaparse';
 import waitForElement from '../utils/waitForElement'
 
 function csvToList_signatories(tableData,idx_start=null,idx_end=null) {
-      var reference_all = $('<ul style="list-style: none; text-align: left; line-height:2"></ul>');
+      var reference_all = $('<ul class="sign_list"></ul>');
       $(tableData).each(function (i,rowData) {
         // console.log(rowData)
           if ((i>=idx_start) & (i<idx_end)) {
@@ -40,26 +40,23 @@ class generateSignatories {
               }).appendTo(
                 $('<div>',{
                   class: "carousel-item",
-                }).appendTo('.carousel-inner'));
+                }).appendTo('.carousel-signatories'));
         }
     });
   }
 }
 
 // generate signatories carousel
-$('.carousel-inner').empty();
+$('.carousel-signatories').empty();
 
 var i;
 var batch_sz = 30;
 var dom_id
 for (i=0; i<4; i++) {
-  console.log(i)
     dom_id = "list__signatories_"+(i+1)
     new generateSignatories('signatories',dom_id,i*batch_sz,(i+1)*batch_sz);
-
     waitForElement('#'+dom_id).then(function(element) {
-        console.log("Element Added", element);
-        $(".carousel-inner .carousel-item").first().addClass("active")
+        $(".carousel-signatories .carousel-item").first().addClass("active")
     });
 };
 

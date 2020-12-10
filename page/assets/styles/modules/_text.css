@@ -62,6 +62,19 @@
   @mixin atSmall {
     font-size: 1.4rem;
   }
+
+  &__title {
+    font-size: 1.4rem;
+    font-weight: bold;
+
+    @mixin atSmall{
+      font-size: 2.0rem;
+    };
+  }
+
+  &__card {
+    font-weight: bold;
+  }
 }
 
 .title {

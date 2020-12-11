@@ -8,6 +8,7 @@
 @import "modules/_navbar";
 @import "modules/_accordion";
 @import "modules/_signatories";
-@import "modules/_carousel";
+@import "modules/_carousel_signatories";
 @import "modules/_footer";
 @import "modules/_hero";
+/* @import "modules/_carousel_language"; */

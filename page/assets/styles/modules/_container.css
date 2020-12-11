@@ -1,4 +1,6 @@
 .container {
+  margin: auto;
+
   &__global {
     max-width:  900px;
   }
@@ -9,5 +11,16 @@
 
   &__statement {
     max-width: 800px;
+  }
+
+  &__references {
+    margin-top: 2rem;
+  }
+
+  &__signatories {
+    display: block;
+    max-width: 800px;
+    height: 1500px;
+    overflow:hidden;
   }
 }

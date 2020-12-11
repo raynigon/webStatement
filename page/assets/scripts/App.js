@@ -2,12 +2,12 @@ import '../styles/styles.css'
 import './modules/carousel'
 import generateList from './modules/generateList'
 
-import addHeader from './modules/addHeader'
+import addHeaderFooter from './modules/addHeader'
 import generateStatement from './modules/generateStatement'
 import generateSignatories from './modules/generateSignatories'
 
-let nav = new addHeader()
-nav.addLangEvents()
+let page_template = new addHeaderFooter()
+page_template.addLangEvents()
 
 new generateList('authors',"#list__authors");
 new generateStatement("English")

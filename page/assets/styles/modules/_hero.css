@@ -1,6 +1,5 @@
 #hero {
   color: white;
-
   background-image: url("data/super-woman-1885016_640.jpg");
   @mixin atSmall {
     background-image: url("data/super-woman-1885016_640.jpg");
@@ -11,10 +10,15 @@
   @mixin atLarge {
     background-image: url("data/super-woman-1885016_1920.jpg");
   }
-
+  display: block;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   margin-bottom: 0;
-  /* height: 100vh; */
+  /* height: 400px; */
+  height: 33%;
+
+  @mixin atMedium {
+    height: 50%;
+  }
 }

@@ -45,6 +45,15 @@
   }
 }
 
+#list__references ul {
+  padding-left: 0;
+
+  li {
+    padding-bottom: 0.5rem;
+  }
+}
+
+
 .sign {
   &__name {
     font-weight: bold;
@@ -74,6 +83,9 @@
 
   &__card {
     font-weight: bold;
+    align: left;
+    width:auto;
+    overflow:hidden
   }
 }
 

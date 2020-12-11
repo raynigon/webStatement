@@ -1,7 +1,7 @@
 import waitForElement from '../utils/waitForElement'
 import generateStatement from './generateStatement'
 
-class addHeader {
+class addHeaderFooter {
   constructor() {
 
     // add hero image
@@ -17,6 +17,12 @@ class addHeader {
     $.get("./templates/navbar.html", function(data){
       $('#navbar').html(data);
     });
+
+    // add footer
+    $('#footer').empty();
+    $.get("./templates/footer.html", function(data){
+      $('#footer').html(data);
+    });
   }
 
   addLangEvents() {
@@ -29,4 +35,4 @@ class addHeader {
   }
 }
 
-export default addHeader
+export default addHeaderFooter

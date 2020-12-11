@@ -2,7 +2,7 @@ import Papa from 'papaparse';
 import waitForElement from '../utils/waitForElement'
 
 function csvToList_signatories(tableData,idx_start=null,idx_end=null) {
-      var reference_all = $('<ul class="sign_list"></ul>');
+      var reference_all = $('<ul class="sign__list"></ul>');
       $(tableData).each(function (i,rowData) {
         // console.log(rowData)
           if ((i>=idx_start) & (i<idx_end)) {
@@ -14,7 +14,7 @@ function csvToList_signatories(tableData,idx_start=null,idx_end=null) {
               $('<span class="sign sign__name">'+rowData.Name+', </span>')
             )
             reference.append(
-              $(' <span class="sign sign__affiliation">'+rowData.Affiliation+', </span>')
+              $(' <span class="sign sign__affiliation">'+rowData.Affiliation+'</span>')
             )
             reference_all.append(reference)
           }

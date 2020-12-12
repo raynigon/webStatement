@@ -1,45 +1,43 @@
 import waitForElement from '../utils/waitForElement'
 // import generateStatement from './generateStatement'
 
-function set_statement_lang(language) {
+function set_statement_lang(language='English',init=false) {
     var language_file = "./data/statement_"+language+".html"
-    $('#statement').load(language_file + "")
+    if (init) {
+      $('#statement').load(language_file)
+    }
+    else {
+      $('#statement__title').load(language_file + " #statement__title")
+      $('#statement__text').load(language_file + " #statement__text")
+    }
 }
 
 class addHeaderFooter {
   constructor() {
 
     // add hero image
-    $('.hero').empty();
     $('.hero').addClass("jumbotron jumbotron-fluid");
-    $.get("./templates/hero.html", function(data){
-      $('.hero').html(data);
-    });
+    $('#hero').load("./templates/hero.html");
 
     // add navigation bar
-    $('#navbar').empty();
     $('#navbar').addClass("navbar navbar-expand-lg navbar-light bg-light sticky-top");
-    $.get("./templates/navbar.html", function(data){
-      $('#navbar').html(data);
-    });
+    $('#navbar').load("./templates/navbar.html");
 
     // add footer
-    $('#footer').empty();
-    $.get("./templates/footer.html", function(data){
-      $('#footer').html(data);
-    });
+    $('#footer').load("./templates/footer.html");
+
+    set_statement_lang('English',true)
+    this.addLangEvents()
   }
 
   addLangEvents() {
-    set_statement_lang("English")
+
     waitForElement('#navbarResponsive').then(function(element) {
       $('#dropdown-languages').children().each(function(i,child) {
         child.onclick = function() {
-          set_statement_lang(child.text)
+          set_statement_lang(child.text,false)
         }
       })
-        // child.onclick = function(){new generateStatement(lang_arr[i])}
-      // })
     })
   }
 }

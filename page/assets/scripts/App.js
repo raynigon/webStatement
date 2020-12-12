@@ -6,8 +6,8 @@ import addHeaderFooter from './modules/addHeader'
 // import generateStatement from './modules/generateStatement'
 import generateSignatories from './modules/generateSignatories'
 
-let page_template = new addHeaderFooter()
-page_template.addLangEvents()
+new addHeaderFooter()
+// page_template.addLangEvents()
 // page_template.
 
 // new generateList('authors',"#list__authors");

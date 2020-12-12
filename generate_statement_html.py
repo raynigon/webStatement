@@ -6,7 +6,7 @@ def format_statement(input_csv):
     with open ("./page/data/statement.html","r") as myfile:
         plain_html = myfile.read()
 
-    df = pd.read_csv(input_csv)#, header=None, names=lis)
+    df = pd.read_csv(input_csv)
     for language in df.columns[1:]:
         new_html = copy.deepcopy(plain_html)
         print(language)
@@ -16,5 +16,4 @@ def format_statement(input_csv):
         text_file.write(new_html)
         text_file.close()
 
-# format_statement("./page/data/languages_test.csv")
 format_statement("./page/data/languages_test.csv")

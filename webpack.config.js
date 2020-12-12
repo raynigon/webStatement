@@ -1,5 +1,6 @@
 const currentTask = process.env.npm_lifecycle_event
 const path = require('path')
+const {CleanWebpackPlugin} = require('clean-webpack-plugin')
 
 const postCSSPlugins = [
   require('postcss-import'),
@@ -41,10 +42,24 @@ if (currentTask == 'dev') {
 
 if (currentTask == 'build') {
   config.output = {
-    filename: 'bundled.js',
+    filename: '[name].[chunkhash].js',
+    chunkFilename: '[name].[chunkhash].js',
     path: path.resolve(__dirname, 'dist')
   }
   config.mode = 'production'
+  config.optimization = {
+    splitChunks: {
+      cacheGroups: {
+        vendor: {
+          test: /[\\/]node_modules[\\/]/,
+          name: "vendors",
+          enforce: true,
+          chunks: "all"
+        }
+      }
+    }
+  }
+  config.plugins = [new CleanWebpackPlugin()]
 }
 
 module.exports = config

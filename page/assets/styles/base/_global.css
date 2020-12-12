@@ -2,11 +2,12 @@ html, body {
   /* font-size:  1.0rem; */
   font-family: Helvetica, sans-serif;
   /* font-family:  Arial Narrow, Verdana, sans-serif; */
-  color: black;
-  background-color: white;
+  color: #4B5E5E;
+  background-color: #EBF7F7;
   height: 100%;
   width: 100%;
   margin: 0;
+  text-align: justify;
 }
 
 img {

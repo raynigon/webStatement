@@ -1,14 +1,19 @@
 import waitForElement from '../utils/waitForElement'
-import generateStatement from './generateStatement'
+// import generateStatement from './generateStatement'
+
+function set_statement_lang(language) {
+    var language_file = "./data/statement_"+language+".html"
+    $('#statement').load(language_file + "")
+}
 
 class addHeaderFooter {
   constructor() {
 
     // add hero image
-    $('#hero').empty();
-    $('#hero').addClass("jumbotron jumbotron-fluid");
+    $('.hero').empty();
+    $('.hero').addClass("jumbotron jumbotron-fluid");
     $.get("./templates/hero.html", function(data){
-      $('#hero').html(data);
+      $('.hero').html(data);
     });
 
     // add navigation bar
@@ -26,11 +31,15 @@ class addHeaderFooter {
   }
 
   addLangEvents() {
-    var lang_arr = ['English','French','German','Italian','Russian']
+    set_statement_lang("English")
     waitForElement('#navbarResponsive').then(function(element) {
       $('#dropdown-languages').children().each(function(i,child) {
-        child.onclick = function(){new generateStatement(lang_arr[i])}
+        child.onclick = function() {
+          set_statement_lang(child.text)
+        }
       })
+        // child.onclick = function(){new generateStatement(lang_arr[i])}
+      // })
     })
   }
 }

@@ -1,6 +1,13 @@
 .container {
   margin: auto;
 
+  &__hero {
+    /* display: inline-block; */
+    /* width: 100%; */
+    /* height: 27%; */
+    /* overflow: scroll; */
+  }
+
   &__global {
     max-width:  900px;
   }
@@ -26,7 +33,8 @@
 
   &__signup {
     position: relative;
-    max-width: 900px;
+    display: block;
+    width: 100%;
     height: 1000px;
     border: none;
   }

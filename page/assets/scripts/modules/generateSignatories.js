@@ -51,8 +51,9 @@ $('.carousel-signatories').empty();
 
 var i;
 var batch_sz = 30;
-var dom_id
-for (i=0; i<4; i++) {
+var dom_id = "list__signatories_1";
+new generateSignatories('signatories',dom_id,0,batch_sz);
+for (i=1; i<4; i++) {
     dom_id = "list__signatories_"+(i+1)
     new generateSignatories('signatories',dom_id,i*batch_sz,(i+1)*batch_sz);
     waitForElement('#'+dom_id).then(function(element) {
@@ -60,4 +61,4 @@ for (i=0; i<4; i++) {
     });
 };
 
-export default generateSignatories;
+// export default generateSignatories;

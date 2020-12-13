@@ -1,9 +1,20 @@
-.sign__list {
-  list-style: none;
-  text-align: left;
-  line-height: 1.5rem;
-  padding-left: 0;
-  li {
-    padding-bottom: 0.5rem;
+.sign {
+  &__name {
+    font-weight: bold;
+    font-size: 1rem;
+  }
+
+  &__affiliation {
+    font-size: 0.8rem;
+  }
+
+  &__list {
+    list-style: none;
+    text-align: left;
+    line-height: 1.5rem;
+    padding-left: 0;
+    li {
+      padding-bottom: 0.5rem;
+    }
   }
 }

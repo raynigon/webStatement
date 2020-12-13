@@ -2,9 +2,9 @@ html, body {
   /* font-size:  1.0rem; */
   font-family: Helvetica, sans-serif;
   /* font-family:  Arial Narrow, Verdana, sans-serif; */
-  
-  color: #4B5E5E;
-  background-color: #EBF7F7;
+
+  color: $darkGrey;
+  background-color: $blueWhite;
   /* height: 100%; */
   /* width: 100%; */
 

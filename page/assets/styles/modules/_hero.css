@@ -50,17 +50,18 @@
   &__title {
     position: absolute;
     align: center;
-    top: 6rem;
-    padding-left: 2rem;
+    top: 10rem;
+    /* padding-bottom: 10rem; */
+    padding-left: 50%;
     font-size: 3rem;
   }
 
   &__subtitle {
     position: absolute;
     align: center;
-    top: 12rem;
-    padding-left: 2rem;
+    top: 17rem;
+    padding-left: 50%;
     font-size: 2rem;
-    width: 40%;
+    width: 90%;
   }
 }

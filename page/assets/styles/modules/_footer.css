@@ -1,14 +1,20 @@
 footer {
-  background-color: #3f3f3f;
-  color: #d5d5d5;
-  padding-top: 2rem;
+  background-color: $darkGrey;
+  color: $blueWhite;
+  /* padding-top: 2rem; */
+  padding: 2rem;
 
-  p {
-    color: #d5d5d5;
+  a {
+    color: $blueWhite;
+    /* padding: 2rem; */
+    margin: 2rem;
   }
+  /* p {
+    color: #d5d5d5;
+  } */
 }
 
-hr.light {
+/* .light {
   border-top: 1px solid #d5d5d5;
   width: 75%;
   margin-top: .8rem;
@@ -17,4 +23,4 @@ hr.light {
   &__100 {
     width: 100%;
   }
-}
+} */

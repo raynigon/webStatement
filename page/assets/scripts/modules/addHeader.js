@@ -22,26 +22,37 @@ function set_statement_lang(language='English',init=false) {
 class addHeaderFooter {
   constructor() {
 
-    // add hero image
-    $('.hero').addClass("jumbotron jumbotron-fluid");
     $('#hero').load("./templates/hero.html");
 
-    // add navigation bar
-    $('#navbar').addClass("navbar navbar-expand-lg navbar-light bg-light sticky-top");
+    $('#navbar').addClass("navbar navbar-expand-lg navbar-dark sticky-top");
     $('#navbar').load("./templates/navbar.html");
+
+    waitForElement('#navbarResponsive').then(function(element) {
+      if (document.getElementById("statement")) {
+        $("#nav-statement").addClass('active')
+      }
+      if (document.getElementById("signatures")) {
+        $("#nav-signatures").addClass('active')
+      }
+      if (document.getElementById("NewsArticle")) {
+        $("#nav-news").addClass('active')
+      }
+      if (document.getElementById("FAQ")) {
+        $("#nav-faq").addClass('active')
+      }
+    })
 
     // add footer
     $('#footer').load("./templates/footer.html");
 
-    if (document.getElementById("statement")) {
-      set_statement_lang("English",true)
-      this.addLangEvents()
-    }
-    if (document.getElementById("NewsArticle")) {
-      set_statement_lang("English",true)
-      // $('#NewsArticle').load("./languageFiles/NewsArticle_German.html");
-      this.addLangEvents()
-    }
+    // if (document.getElementById("statement")) {
+    set_statement_lang("English",true)
+    this.addLangEvents()
+    // }
+    // if (document.getElementById("NewsArticle")) {
+      // set_statement_lang("English",true)
+      // this.addLangEvents()
+    // }
   }
 
   addLangEvents() {

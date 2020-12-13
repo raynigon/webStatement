@@ -1,7 +1,11 @@
+#accordion {
+  padding-bottom: 2rem;
+}
+
 .card-header {
   margin: 0;
   padding: 0.2rem;
-  background-color: $minorBlue;
+  background-color: $darkBlue;
 }
 
 .btn-link {
@@ -12,7 +16,7 @@
 }
 
 .card-body {
-  background-color: $mainYellow;
+  background-color: $blueWhite;
 }
 
 .rotate-icon {

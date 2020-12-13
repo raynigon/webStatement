@@ -1,0 +1,44 @@
+.newsArticleText {
+  font-family: TimesNewRoman, serif;
+  font-size: 1.0rem;
+
+  @mixin atSmall {
+    font-size: 1.4rem;
+  }
+
+  &__title {
+    font-size: 1.4rem;
+    font-weight: bold;
+
+    @mixin atSmall{
+      font-size: 2.0rem;
+    };
+  }
+
+  &__subtitle {
+    font-size: 1.1rem;
+    font-weight: bold;
+
+    @mixin atSmall{
+      font-size: 1.5rem;
+    };
+  }
+
+  &__authors {
+    font-size: 0.8rem;
+  }
+
+  &__plain {
+    /* font-weight: bold; */
+    /* align: left; */
+    width:auto;
+    /* overflow:hidden */
+  }
+
+  &__enumerate1 {
+    padding-bottom: 1rem;
+  }
+  &__enumerate2 {
+    padding-bottom: 1rem;
+  }
+}

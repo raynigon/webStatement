@@ -5,7 +5,13 @@
 .card-header {
   margin: 0;
   padding: 0.2rem;
-  background-color: $darkBlue;
+
+  &__statement {
+    background-color: $darkBlue;
+  }
+  &__faq {
+    background-color: $blueWhite;
+  }
 }
 
 .btn-link {

@@ -11,6 +11,7 @@ function set_statement_lang(language='English',init=false) {
       else {
         $('#statement__title').load(language_file + " #statement__title")
         $('#statement__text').load(language_file + " #statement__text")
+        $('#statement__references').load(language_file + " #statement__references")
       }
     }
     if (document.getElementById("NewsArticle")) {

@@ -9,11 +9,12 @@
   }
 
   &__global {
+    padding-top: 2rem;
     width:  900px;
   }
 
-  &__authors {
-    max-width: 1000px;
+  &__languageDisclaimer {
+    max-width: 90%;
   }
 
   &__statement {

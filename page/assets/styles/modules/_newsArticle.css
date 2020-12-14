@@ -3,7 +3,7 @@
   font-size: 1.0rem;
 
   @mixin atSmall {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
 
   &__title {
@@ -16,23 +16,38 @@
   }
 
   &__subtitle {
-    font-size: 1.1rem;
+    font-size: 0.9rem;
     font-weight: bold;
+    color: black;
 
     @mixin atSmall{
-      font-size: 1.5rem;
+      font-size: 1rem;
     };
   }
 
-  &__authors {
+  /* &__authors {
     font-size: 0.8rem;
+  } */
+
+  &__disclaimer {
+    font-size: 1rem;
+  }
+
+  &__citation {
+    font-style: italic;
+  }
+
+  &__teaser {
+    font-weight: bold;
+    font-size: 1.1rem;
+
+    @mixin atSmall{
+      font-size: 1.4rem;
+    };
   }
 
   &__plain {
-    /* font-weight: bold; */
-    /* align: left; */
     width:auto;
-    /* overflow:hidden */
   }
 
   &__enumerate1 {

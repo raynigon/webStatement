@@ -1,31 +1,81 @@
-.author {
+.text-statement {
+  font-family: Helvetica, sans-serif;
+  color: $darkGrey;
 
-  &__name {
+  &__author {
     font-weight: normal;
     font-size:  0.8rem;
-    color: black;
+
+    @mixin atSmall {
+      font-size: 1rem;
+    }
+
+    &__name:hover {
+      color: black;
+      text-decoration: underline;
+      font-weight: bold;
+    }
+
+    &__name[title]:after {
+      content: attr(title);
+      position: absolute;
+      top: -100%;
+      left: 0;
+      font-size: 2rem;
+    }
+
+    /* &__affiliation {
+      font-size: 0.8rem;
+    } */
+  }
+
+  &__plain {
+    font-size: 1rem;
+    &__highlight {
+      font-weight: bold;
+    }
 
     @mixin atSmall {
       font-size: 1.2rem;
     }
   }
 
-  &__name:hover {
-    color: black;
-    text-decoration: underline;
-    font-weight: bold;
+  &__card {
+    font-size: 1rem;
+    &__highlight {
+      font-weight: bold;
+    }
+
+    @mixin atSmall {
+      font-size: 1.2rem;
+    }
   }
 
-  &__name[title]:after {
-  content: attr(title);
-  position: absolute;
-  top: -100%;
-  left: 0;
-  font-size: 2rem;
-}
+  &__card-body {
+    font-size: 1rem;
+    &__highlight {
+      font-weight: bold;
+    }
 
-  &__affiliation {
-    font-size: 0.8rem;
+    @mixin atSmall {
+      font-size: 1.2rem;
+    }
+  }
+
+  &__title {
+    font-size: 1.4rem;
+    font-weight: bold;
+
+    @mixin atSmall{
+      font-size: 2.0rem;
+    };
+  }
+
+  &__card {
+    font-weight: bold;
+    align: left;
+    width:auto;
+    overflow:hidden
   }
 }
 
@@ -53,30 +103,6 @@
   }
 }
 
-.statement {
-  font-size: 1.0rem;
-
-  @mixin atSmall {
-    font-size: 1.4rem;
-  }
-
-  &__title {
-    font-size: 1.4rem;
-    font-weight: bold;
-
-    @mixin atSmall{
-      font-size: 2.0rem;
-    };
-  }
-
-  &__card {
-    font-weight: bold;
-    align: left;
-    width:auto;
-    overflow:hidden
-  }
-}
-
 .title {
   color: black;
   font-size: 1.6rem;
@@ -86,27 +112,19 @@
   }
 
 }
-/* @media (min-width:530px) {
-    .title {
-        font-size: 6.0rem;
-    }
-} */
+
+.list-major {
+  counter-reset: list-minor;
+}
 
 .list-minor {
   list-style-position: inside;
-  counter-reset: list;
   padding-left: 0px;
 }
 .list-minor > li {
   list-style: none;
+  counter-increment: lis;
 }
 .list-minor > li:before {
-  content: "(" counter(list, lower-roman) ") ";
-  counter-increment: list;
-}
-
-.text__statement {
-  width: 100%;
-  height: 1000px;
-  overflow: visible;
+  content: "(" counter(lis, lower-roman) ") ";
 }

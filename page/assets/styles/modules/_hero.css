@@ -1,46 +1,33 @@
-#hero {
-  /* color: white; */
-  /* background-image: url("data/ContainCovid.png"); */
-  /* background-image: url("data/super-woman-1885016_640.jpg"); */
-  /* @mixin atSmall {
-    background-image: url("data/super-woman-1885016_640.jpg");
-  }
-  @mixin atMedium {
-    background-image: url("data/super-woman-1885016_1280.jpg");
-  }
-  @mixin atLarge {
-    background-image: url("data/super-woman-1885016_1920.jpg");
-  } */
-
-  /* width: 100%; */
-  /* height: auto; */
-  /* padding-top: 27%; */
-  /* display: block; */
-
-  /* background-position: center; */
-  /* background-repeat: no-repeat; */
-  /* background-size: contain; */
-  /* margin-bottom: 0; */
-
-  /* height: 400px; */
-
-  /* @mixin atMedium {
-    height: 30%;
-  } */
-
-
-}
-
-#hero {
-  width: 100%;
-}
-
 .hero {
-  /* height: auto; */
+  /* Set a specific height */
+  display: block;
+  overflow: visible;
+  width: 100%;
 
-  &__image {
-    position: relative;
-    /* display: block; */
+  padding-top: 68%;
+  @mixin atSmall {
+    padding-top: 29.3%;
+  }
+
+  /* Position and center the image to scale nicely on all screens */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+  &__image1 {
+    /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),  */
+    background-image: url("./images/low_numbers_v1.png");
+    @mixin atSmall {
+      background-image: url("./images/low_numbers_wide.png");
+    }
+  }
+  &__image2 {
+    /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./images/europe_header.png"); */
+    background-image: url("./images/commoneurope.png");
+    @mixin atSmall {
+      background-image: url("./images/europe_header.png");
+    }
   }
 
   &__textdiv {
@@ -48,20 +35,33 @@
   }
 
   &__title {
+    text-align: right;
     position: absolute;
-    align: center;
-    top: 10rem;
-    /* padding-bottom: 10rem; */
-    padding-left: 50%;
-    font-size: 3rem;
+    color: $darkGrey;
+    right: 5%;
+    top: 0%;
+    width: 60%;
+
+    font-size: 1.8rem;
+    @mixin atSmall {
+      font-size: 5vmax;
+    }
   }
 
   &__subtitle {
+    /* padding-left: 50%; */
     position: absolute;
-    align: center;
-    top: 17rem;
-    padding-left: 50%;
-    font-size: 2rem;
-    width: 90%;
+    text-align: right;
+    right: 5%;
+    width: 50%;
+    color: $darkGrey;
+
+    /* top: 30%; */
+    top: 12%;
+    font-size: 1.2rem;
+    @mixin atSmall {
+      top: 14%;
+      font-size: 3vmax;
+    }
   }
 }

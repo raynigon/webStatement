@@ -15,6 +15,7 @@
 
   &__languageDisclaimer {
     max-width: 90%;
+    padding-bottom: 1rem;
   }
 
   &__statement {

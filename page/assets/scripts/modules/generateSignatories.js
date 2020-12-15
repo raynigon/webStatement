@@ -24,10 +24,12 @@ function csvToList_signatories(tableData,idx_start=null,idx_end=null) {
 
 class generateSignatories {
 
-  constructor(type,dom_ref,idx_start=null,idx_end=null) {
+  constructor(type,dom_ref,i,batch_sz) {
+    var idx_start = i*batch_sz;
+    var idx_end = (i+1)*batch_sz;
     $.ajax({
         type: "GET",
-        url: './data/signatories.csv',
+        url: './data/signatories_primary.csv',
         success: function (data) {
             $('<div>',{
                 class: "d-flex justify-content-center",
@@ -41,6 +43,8 @@ class generateSignatories {
                 $('<div>',{
                   class: "carousel-item",
                 }).appendTo('.carousel-signatories'));
+
+            $('.carousel-indicators').append("<li class='carousel-indicator-item' data-target='#carousel-signatories' data-slide-to='"+i+"'></li>")
         }
     });
   }
@@ -48,16 +52,18 @@ class generateSignatories {
 
 // generate signatories carousel
 $('.carousel-signatories').empty();
+$('.carousel-indicators').empty();
 
 var i;
 var batch_sz = 30;
 var dom_id = "list__signatories_1";
 new generateSignatories('signatories',dom_id,0,batch_sz);
-for (i=1; i<4; i++) {
+for (i=1; i<5; i++) {
     dom_id = "list__signatories_"+(i+1)
-    new generateSignatories('signatories',dom_id,i*batch_sz,(i+1)*batch_sz);
+    new generateSignatories('signatories',dom_id,i,batch_sz);
     waitForElement('#'+dom_id).then(function(element) {
         $(".carousel-signatories .carousel-item").first().addClass("active")
+        $(".carousel-indicators .carousel-indicator-item").first().addClass("active")
     });
 };
 

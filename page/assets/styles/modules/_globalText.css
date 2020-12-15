@@ -14,3 +14,21 @@
     color:black;
   }
 }
+
+.languageDisclaimer
+{
+  &__collapse {
+    display: block;
+    padding: 1rem;
+  }
+
+  &__button {
+    color: $darkGrey;
+    text-decoration: underline;
+    padding-bottom: 1rem;
+  }
+  &__button:hover {
+    color: black;
+    font-weight: bold;
+  }
+}

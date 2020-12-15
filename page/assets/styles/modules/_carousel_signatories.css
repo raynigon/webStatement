@@ -19,7 +19,8 @@
     left: -80px;
 } */
 
-.carousel-signatories {
+/* .carousel-signatories { */
+.carousel-indicator-item {
   display: block;
   margin-top: 4rem;
   padding: 0.5rem;

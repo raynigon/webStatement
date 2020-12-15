@@ -4,25 +4,14 @@
   max-width: 800px;
   height: 1500px;
   overflow:hidden;
-  /* background-color: green; */
 }
 
-/* .carousel-control-next-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='black' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
-    position: relative;
-    right: -80px;
-} */
-
-/* .carousel-control-prev-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='black' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
-    position: relative;
-    left: -80px;
-} */
-
-/* .carousel-signatories { */
+.carousel-item {
+  margin-top: 4em;
+}
 .carousel-indicator-item {
   display: block;
-  margin-top: 4rem;
+  margin-top: 4em;
   padding: 0.5rem;
 }
 

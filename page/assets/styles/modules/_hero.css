@@ -5,7 +5,7 @@
   width: 100%;
 
   padding-top: 68%;
-  @mixin atSmall {
+  @mixin atLarge {
     padding-top: 29.3%;
   }
 
@@ -18,14 +18,14 @@
   &__image1 {
     /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),  */
     background-image: url("./images/low_numbers_v1.png");
-    @mixin atSmall {
+    @mixin atLarge {
       background-image: url("./images/low_numbers_wide.png");
     }
   }
   &__image2 {
     /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./images/europe_header.png"); */
     background-image: url("./images/commoneurope.png");
-    @mixin atSmall {
+    @mixin atLarge {
       background-image: url("./images/europe_header.png");
     }
   }
@@ -34,34 +34,29 @@
     height:0;
   }
 
+  &__text {
+    position: absolute;
+    right: 5%;
+    width: 50%;
+    top: 0%;
+  }
   &__title {
     text-align: right;
-    position: absolute;
-    color: $darkGrey;
-    right: 5%;
-    top: 0%;
-    width: 60%;
-
+    color: $blueWhite;
+    /* $darkGrey; */
     font-size: 1.8rem;
-    @mixin atSmall {
-      font-size: 5vmax;
+    @mixin atLarge {
+      font-size: 4vmax;
     }
   }
 
   &__subtitle {
-    /* padding-left: 50%; */
-    position: absolute;
     text-align: right;
-    right: 5%;
-    width: 50%;
-    color: $darkGrey;
-
-    /* top: 30%; */
-    top: 12%;
+    /* color: $darkGrey; */
+    color: $blueWhite;
     font-size: 1.2rem;
-    @mixin atSmall {
-      top: 14%;
-      font-size: 3vmax;
+    @mixin atLarge {
+      font-size: 2.5vmax;
     }
   }
 }

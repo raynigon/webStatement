@@ -22,20 +22,20 @@ def format_text(output_file,delimiter=';'):
         html_string += add_name(j,row,key_class='signatories-initial')
     html_string += '</ol>\n'
 
-    html_string += 'Further signatories \n'
-    html_string += "<ol>"
-    df = pd.read_csv("../containcovid/data/signatories_further.csv",delimiter=';')
-    for i,row in df.iterrows():
-        j += 1
-        html_string += '\n'
-        html_string += add_name(j,row,key_class='signatories-further')
-    html_string += '</ol>\n'
+    # html_string += 'Further signatories \n'
+    # html_string += "<ol>"
+    # df = pd.read_csv("../containcovid/data/signatories_further.csv",delimiter=';')
+    # for i,row in df.iterrows():
+    #     j += 1
+    #     html_string += '\n'
+    #     html_string += add_name(j,row,key_class='signatories-further')
+    # html_string += '</ol>\n'
 
     text_file = open(output_file, "w")
     text_file.write(html_string)
     text_file.close()
 
-format_text("../containcovid/data/signatories_complete.html")
+format_text("../containcovid/templates/signatories_complete.html")
 
 # def format_signatories():
 #

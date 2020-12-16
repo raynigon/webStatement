@@ -19,7 +19,7 @@ class generateSignatories {
               }).append($('<div>',{
                   class: "d-flex justify-content-center",
                   id: dom_id,
-                })).load('./data/signatories_complete.html li.signatories-initial:lt('+(i+1)*batch_sz+')'));
+                })).load('./templates/signatories_complete.html li.signatories-initial:lt('+(i+1)*batch_sz+')'));
 
           $('.carousel-indicators').append("<li class='carousel-indicator-item' data-target='#carousel-signatories' data-slide-to='"+i+"'></li>")
         }
@@ -29,7 +29,7 @@ class generateSignatories {
               }).append($('<div>',{
                   class: "d-flex justify-content-center",
                   id: dom_id,
-                })).append($('<ul>')).load('./data/signatories_complete.html li.signatories-initial:lt('+(i+1)*batch_sz+'):gt('+(i*batch_sz-1)+')'));
+                })).append($('<ul>')).load('./templates/signatories_complete.html li.signatories-initial:lt('+(i+1)*batch_sz+'):gt('+(i*batch_sz-1)+')'));
 
           $('.carousel-indicators').append("<li class='carousel-indicator-item' data-target='#carousel-signatories' data-slide-to='"+i+"'></li>")
         }

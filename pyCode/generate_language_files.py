@@ -11,7 +11,10 @@ def format_text(input_template,output_file,input_csv,keyword,delimiter=';'):
         new_html = copy.deepcopy(plain_html)
         print(language)
         for i,d in df.iterrows():
-            new_html = new_html.replace('%s_%02d'%(keyword,i),d[language])
+            if isinstance(d[language],str):
+                new_html = new_html.replace('%s_%02d'%(keyword,i),d[language])
+            else:
+                new_html = new_html.replace('%s_%02d'%(keyword,i),"")
         text_file = open("%s_%s.html"%(output_file,language), "w")
         text_file.write(new_html)
         text_file.close()

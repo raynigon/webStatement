@@ -1,0 +1,134 @@
+.text-statement {
+  font-family: Helvetica, sans-serif;
+  color: $darkGrey;
+
+  &__author {
+    font-weight: normal;
+    font-size:  0.8rem;
+
+    @mixin atSmall {
+      font-size: 1rem;
+    }
+
+    &__name:hover {
+      color: black;
+      text-decoration: underline;
+      font-weight: bold;
+    }
+
+    &__name[title]:after {
+      content: attr(title);
+      position: absolute;
+      top: -100%;
+      left: 0;
+      font-size: 2rem;
+    }
+  }
+
+  &__plain {
+    font-size: 1rem;
+    &__highlight {
+      font-weight: bold;
+    }
+
+    @mixin atSmall {
+      font-size: 1.1rem;
+    }
+  }
+
+  &__card {
+    font-size: 1rem;
+    &__highlight {
+      font-weight: bold;
+    }
+
+    @mixin atSmall {
+      font-size: 1.1rem;
+    }
+  }
+
+  &__card-body {
+    font-size: 1rem;
+    &__highlight {
+      font-weight: bold;
+    }
+
+    @mixin atSmall {
+      font-size: 1.2rem;
+    }
+  }
+
+  &__title {
+    font-size: 1.4rem;
+    font-weight: bold;
+
+    @mixin atSmall{
+      font-size: 2.0rem;
+    };
+  }
+
+  &__card {
+    font-weight: bold;
+    align: left;
+    width:auto;
+    overflow:hidden
+  }
+
+  &__callForAction {
+    font-size: 1.4rem;
+  }
+  &__translator {
+    font-size: 0.8rem;
+    font-style: italic;
+  }
+}
+
+.ref {
+  font-size:  1rem;
+
+  &__number {
+    font-weight: bold;
+  }
+  &__title {
+    font-style: italic;
+  }
+
+  &__title-link {
+    color: black;
+    text-decoration: underline;
+  }
+}
+
+#list__references ul {
+  padding-left: 0;
+
+  li {
+    padding-bottom: 0.5rem;
+  }
+}
+
+.title {
+  color: black;
+  font-size: 1.6rem;
+
+  @mixin atSmall {
+    font-size: 3.2rem;
+  }
+
+}
+
+.list-major {
+  counter-reset: list-minor;
+}
+
+.list-minor {
+  list-style-position: inside;
+  padding-left: 0px;
+}
+.list-minor > li {
+  list-style: none;
+  counter-increment: lis;
+}
+.list-minor > li:before {
+  content: "(" counter(lis, lower-roman) ") ";
+}

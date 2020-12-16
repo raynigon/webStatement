@@ -21,6 +21,17 @@ def remove_last_fullstop(string):
         string = string[:-1]
     return string
 
+def remove_whitespace(string):
+    return string.strip()
+
+def create_html(df):
+
+    for row in df.iterrows():
+        str_author = "<li>"+row[1]+"</li>"
+
+    # print(line)
+
+
 def format_csv(input_filename, output_filename):
     lis = list(range(15))
     df = pd.read_csv(input_filename, header=None, names=lis)
@@ -60,9 +71,16 @@ def format_csv(input_filename, output_filename):
     new_df[new_df.columns[1]] = new_df[new_df.columns[1]].apply(
         remove_last_fullstop
         )
+    # Remove leading spaces
+    new_df[new_df.columns[1]] = new_df[new_df.columns[1]].apply(
+        remove_whitespace
+        )
 
-    #print(new_df)
+    # create_html(new_df)
+
+    # print(new_df)
     new_df.to_csv(output_filename, sep=";", index=False)
 
 
-format_csv("../page/data/signatories_raw.csv", "../page/data/signatories_primary.csv")
+format_csv("../containcovid/data/signatories_initial_raw.csv", "../containcovid/data/signatories_initial.csv")
+format_csv("../containcovid/data/signatories_further_raw.csv", "../containcovid/data/signatories_further.csv")

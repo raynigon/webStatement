@@ -1,0 +1,79 @@
+.hero {
+  /* Set a specific height */
+  display: block;
+  overflow: visible;
+  width: 100%;
+
+  /* Position and center the image to scale nicely on all screens */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+  padding-top: 75%;
+  @mixin atSmall {
+    padding-top: 37.5%;
+  }
+  @mixin atMedium {
+    padding-top: 29.3%;
+  }
+
+
+  &__image1 {
+    /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),  */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./images/header/low_numbers_h=768.png");
+    @mixin atSmall {
+      background-image: url("./images/header/low_numbers_h=384.png");
+    }
+    @mixin atMedium {
+      background-image: url("./images/header/low_numbers_h=300.png");
+    }
+  }
+  &__image2 {
+    /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./images/europe_header.png"); */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./images/header/europe_h=768.png");
+    @mixin atSmall {
+      background-image: url("./images/header/europe_h=384.png");
+    }
+    @mixin atMedium {
+      background-image: url("./images/header/europe_h=300.png");
+    }
+  }
+
+  &__textdiv {
+    height:0;
+  }
+
+  &__text {
+    position: absolute;
+    right: 5%;
+    width: 65%;
+    top: 0%;
+  }
+  &__title {
+    text-align: right;
+    color: $blueWhite;
+    hyphens: none;
+    /* $darkGrey; */
+    font-size: 1.8rem;
+    @mixin atSmall {
+      font-size: 2.5vmax;
+    }
+    @mixin atMedium {
+      font-size: 3.5vmax;
+    }
+  }
+
+  &__subtitle {
+    text-align: right;
+    /* color: $darkGrey; */
+    color: $blueWhite;
+    font-size: 1.2rem;
+    @mixin atSmall {
+      font-size: 1.8vmax;
+    }
+    @mixin atMedium {
+      font-size: 2vmax;
+    }
+  }
+}

@@ -1,27 +1,41 @@
 import pandas as pd
 import copy
 
-def format_text(input_template,output_file,input_csv,keyword,delimiter=';'):
+def add_name(j,row,key_class=""):
+    str = '<li class="'+key_class+'">'
+    # print(line['Name'])
+    str += '<span>[%d] </span> '%j
+    str += '<span class="sign sign__name">'+row.Name+', </span>'
+    str += ' <span class="sign sign__affiliation">'+row.Affiliation+'</span>'
+    str += '</li>'
+    return str
 
-    with open ("../page/data/signatories_initial.csv","r") as myfile:
-        plain_html = myfile.read()
+def format_text(output_file,delimiter=';'):
 
+    j = 0;
+    html_string = "<ol>"
 
-    with open ("../page/data/signatories_further.csv","r") as myfile:
-        plain_html = myfile.read()
+    df = pd.read_csv("../containcovid/data/signatories_initial.csv",delimiter=';')
+    for i,row in df.iterrows():
+        j += 1
+        html_string += '\n'
+        html_string += add_name(j,row,key_class='signatories-initial')
+    html_string += '</ol>\n'
 
-    df = pd.read_csv(input_csv,delimiter=delimiter)
-    for language in df.columns[1:]:
-        new_html = copy.deepcopy(plain_html)
-        print(language)
-        for i,d in df.iterrows():
-            new_html = new_html.replace('%s_%02d'%(keyword,i),d[language])
-        text_file = open("%s_%s.html"%(output_file,language), "w")
-        text_file.write(new_html)
-        text_file.close()
+    html_string += 'Further signatories \n'
+    html_string += "<ol>"
+    df = pd.read_csv("../containcovid/data/signatories_further.csv",delimiter=';')
+    for i,row in df.iterrows():
+        j += 1
+        html_string += '\n'
+        html_string += add_name(j,row,key_class='signatories-further')
+    html_string += '</ol>\n'
 
-format_text("../page/templates/template_NewsArticle.html","../page/languageFiles/NewsArticle","../page/data/NewsArticle.csv","Text")
-format_text("../page/templates/template_statement.html","../page/languageFiles/statement","../page/data/statement.csv","statement",',')
+    text_file = open(output_file, "w")
+    text_file.write(html_string)
+    text_file.close()
+
+format_text("../containcovid/data/signatories_complete.html")
 
 # def format_signatories():
 #

@@ -82,5 +82,5 @@ def format_csv(input_filename, output_filename):
     new_df.to_csv(output_filename, sep=";", index=False)
 
 
-format_csv("../page/data/signatories_initial_raw.csv", "../page/data/signatories_initial.csv")
-format_csv("../page/data/signatories_further_raw.csv", "../page/data/signatories_further.csv")
+format_csv("../containcovid/data/signatories_initial_raw.csv", "../containcovid/data/signatories_initial.csv")
+format_csv("../containcovid/data/signatories_further_raw.csv", "../containcovid/data/signatories_further.csv")

@@ -16,8 +16,8 @@ def format_text(input_template,output_file,input_csv,keyword,delimiter=';'):
         text_file.write(new_html)
         text_file.close()
 
-format_text("../page/templates/template_NewsArticle.html","../page/languageFiles/NewsArticle","../page/data/NewsArticle.csv","Text")
-format_text("../page/templates/template_statement.html","../page/languageFiles/statement","../page/data/statement.csv","statement",',')
+format_text("../containcovid/templates/template_NewsArticle.html","../containcovid/languageFiles/NewsArticle","../containcovid/data/NewsArticle.csv","Text")
+format_text("../containcovid/templates/template_statement.html","../containcovid/languageFiles/statement","../containcovid/data/statement.csv","statement",',')
 
 # def format_signatories():
 #

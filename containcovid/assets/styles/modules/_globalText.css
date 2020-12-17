@@ -32,3 +32,15 @@
     font-weight: bold;
   }
 }
+
+.external-link {
+  font-weight: bold;
+  color: black;
+  text-decoration: underline;
+}
+
+.internal-link {
+  font-weight: normal;
+  color: $darkGrey;
+  text-decoration: underline;
+}

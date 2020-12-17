@@ -60,4 +60,13 @@
   &__privacy {
     max-width: 90%;
   }
+
+  &__impress {
+    max-width: 90%;
+    padding-top: 2rem;
+  }
+
+  &__data {
+    padding-top: 2rem;
+  }
 }

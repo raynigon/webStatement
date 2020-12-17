@@ -27,13 +27,19 @@
 
   &__plain {
     font-size: 1rem;
-    &__highlight {
-      font-weight: bold;
-    }
 
     @mixin atSmall {
       font-size: 1.1rem;
     }
+  }
+
+  &__highlight {
+    font-size: 1rem;
+
+    @mixin atSmall {
+      font-size: 1.1rem;
+    }
+    font-weight: bold;
   }
 
   &__card {

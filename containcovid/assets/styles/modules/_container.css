@@ -30,8 +30,8 @@
   &__signatories {
     display: block;
     max-width: 90%;
-    height: 1500px;
-    overflow:hidden;
+    /* height: 1500px; */
+    /* overflow:hidden; */
   }
 
   &__signup {
@@ -52,9 +52,9 @@
 
   &__faq {
     max-width: 90%;
-    display: block;
-    height: 1000px;
-    overflow: visible;
+    /* display: block; */
+    /* height: 1000px; */
+    /* overflow: visible; */
   }
 
   &__privacy {

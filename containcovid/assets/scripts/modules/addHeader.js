@@ -39,8 +39,8 @@ class addHeaderFooter {
       if (document.getElementById("NewsArticle")) {
         $("#nav-news").addClass('active')
       }
-      if (document.getElementById("FAQ")) {
-        $("#nav-faq").addClass('active')
+      if (document.getElementById("interview")) {
+        $("#nav-interview").addClass('active')
       }
     })
 

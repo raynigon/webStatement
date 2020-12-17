@@ -1,0 +1,92 @@
+.interview {
+  font-family: Helvetica, sans-serif;
+  color: $darkGrey;
+  font-size:  1rem;
+
+  &__author {
+    font-weight: normal;
+    font-style: italic;
+  }
+
+  &__plain {
+    font-size: 1rem;
+  }
+
+  &__card {
+    align: left;
+    font-size: 1.1rem;
+    font-weight: bold;
+    /* width:auto; */
+    /* overflow:hidden */
+  }
+
+  /* &__card-body {
+    font-size: 1rem;
+    &__highlight {
+      font-weight: bold;
+    }
+
+    @mixin atSmall {
+      font-size: 1.2rem;
+    }
+  } */
+
+  &__title {
+    font-size: 1.4rem;
+    font-weight: bold;
+
+    @mixin atSmall{
+      font-size: 2.0rem;
+    };
+  }
+}
+
+.ref {
+  font-size:  1rem;
+
+  &__number {
+    font-weight: bold;
+  }
+  &__title {
+    font-style: italic;
+  }
+
+  &__title-link {
+    color: black;
+    text-decoration: underline;
+  }
+}
+
+#list__references ul {
+  padding-left: 0;
+
+  li {
+    padding-bottom: 0.5rem;
+  }
+}
+
+.title {
+  color: black;
+  font-size: 1.6rem;
+
+  @mixin atSmall {
+    font-size: 3.2rem;
+  }
+
+}
+
+/* .list-major {
+  counter-reset: list-minor;
+}
+
+.list-minor {
+  list-style-position: inside;
+  padding-left: 0px;
+}
+.list-minor > li {
+  list-style: none;
+  counter-increment: lis;
+}
+.list-minor > li:before {
+  content: "(" counter(lis, lower-roman) ") ";
+} */

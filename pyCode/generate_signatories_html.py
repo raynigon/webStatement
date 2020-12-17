@@ -5,7 +5,7 @@ def add_name(j,row,key_class=""):
     str = '<li class="'+key_class+'">'
     # print(line['Name'])
     str += '<span>[%d] </span> '%j
-    str += '<span class="sign sign__name">'+row.Name+', </span>'
+    str += '<span class="sign sign__name">'+row.Name.strip()+', </span>'
     str += ' <span class="sign sign__affiliation">'+row.Affiliation+'</span>'
     str += '</li>'
     return str

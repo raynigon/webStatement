@@ -6,11 +6,11 @@ class generateSignatories {
     $('.carousel-signatories').empty();
     $('.carousel-indicators').empty();
 
-    var batch_sz = 30;
+    var batch_sz = 50;
     var dom_id = "list__signatories_1";
     // new generateSignatories('./data/signatories_initial.csv',dom_id,0,batch_sz);
 
-    for (var i=0; i<9; i++) {
+    for (var i=0; i<6; i++) {
         dom_id = "list__signatories_"+(i+1)
 
         if (i==0) {

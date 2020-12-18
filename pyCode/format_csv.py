@@ -39,6 +39,7 @@ def format_csv(input_filename, output_filename):
     for index, row in df.iterrows():
         cell_content = row[0]
         strings = cell_content.split(',')
+        strings = list(filter(lambda a: a != "", strings))
         name = strings[0]
         affiliation = ','.join(strings[1:-1])
         affiliation = affiliation[1:]

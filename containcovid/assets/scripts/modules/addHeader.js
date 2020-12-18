@@ -24,6 +24,7 @@ function set_statement_lang(language='English',init=false) {
 class addHeaderFooter {
   constructor() {
 
+    $('#hero').addClass("hero");
     $('#hero').load("./templates/hero.html");
 
     $('#navbar').addClass("navbar navbar-expand-lg navbar-dark sticky-top");
@@ -58,9 +59,11 @@ class addHeaderFooter {
   }
 
   addLangEvents() {
-
+    console.log('add?')
     waitForElement('#navbarResponsive').then(function(element) {
+      console.log('change lang set')
       $('#dropdown-languages').children().each(function(i,child) {
+        console.log('change lang'+child.text)
         child.onclick = function() {
           set_statement_lang(child.text,false)
         }

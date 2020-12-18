@@ -13,7 +13,7 @@
     &__name:hover {
       color: black;
       text-decoration: underline;
-      font-weight: bold;
+      /* font-weight: bold; */
     }
 
     &__name[title]:after {
@@ -43,6 +43,7 @@
   }
 
   &__card {
+    color: $blueWhite;
     font-size: 1rem;
     &__highlight {
       font-weight: bold;
@@ -87,6 +88,10 @@
     font-size: 0.8rem;
     font-style: italic;
   }
+
+  /* a { */
+    /* color: white; */
+  /* } */
 }
 
 .ref {

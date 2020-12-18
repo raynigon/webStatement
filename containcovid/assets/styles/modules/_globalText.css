@@ -29,18 +29,18 @@
   }
   &__button:hover {
     color: black;
-    font-weight: bold;
+    /* font-weight: bold; */
   }
 }
 
 .external-link {
   font-weight: bold;
-  color: black;
+  color: $darkBlue;
   text-decoration: underline;
 }
 
 .internal-link {
   font-weight: normal;
-  color: $darkGrey;
+  color: $darkBlue;
   text-decoration: underline;
 }

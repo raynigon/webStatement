@@ -1,17 +1,13 @@
 footer {
   background-color: $darkGrey;
   color: $blueWhite;
-  /* padding-top: 2rem; */
   padding: 2rem;
 
   a {
     color: $blueWhite;
-    /* padding: 2rem; */
     margin: 2rem;
+    font-size: 1.2rem;
   }
-  /* p {
-    color: #d5d5d5;
-  } */
 }
 
 /* .light {

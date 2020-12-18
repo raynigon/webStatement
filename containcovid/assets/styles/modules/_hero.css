@@ -23,9 +23,9 @@
   background-color: $darkBlue;
   /* Position and center the image to scale nicely on all screens */
   &__image {
-    display: block;
-    overflow: visible;
-    width: 100%;
+    /* display: block; */
+    /* overflow: visible; */
+    /* width: 100%; */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -42,20 +42,12 @@
   }
 
   &__textdiv {
-    position: relative;
-    height:10px;
-    /* left: 0%; */
-    width: 65%;
-    top: -200px;
-
+    position: absolute;
+    z-index: 2;
+    right: 5%;
+    width: 60%;
   }
 
-  /* &__text {
-    position: relative;
-    right: 5%;
-    width: 65%;
-    top: -200px;
-  } */
   &__title {
 
     text-align: right!important;
@@ -66,22 +58,28 @@
     /* $darkGrey; */
     font-size: 1.8rem;
     @mixin atSmall {
-      font-size: 2.5vmax;
+      font-size: 2rem;
     }
     @mixin atMedium {
-      font-size: 3.5rem;
+      font-size: 2.5rem;
+    }
+    @mixin atLarge {
+      font-size: 3rem;
     }
   }
 
   &__subtitle {
     text-align: right;
     /* color: $darkGrey; */
-    color: $mainYellow;
+    color: $blueWhite;
     font-size: 1.2rem;
     @mixin atSmall {
-      font-size: 1.8vmax;
+      font-size: 1.5rem;
     }
     @mixin atMedium {
+      font-size: 1.8rem;
+    }
+    @mixin atLarge {
       font-size: 2rem;
     }
   }

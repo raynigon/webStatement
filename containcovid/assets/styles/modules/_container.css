@@ -1,5 +1,9 @@
+.container-lg {
+  padding: 0;
+}
+
 .container {
-  margin: auto;
+  /* margin: auto; */
 
   /* &__hero { */
     /* display: inline-block; */
@@ -8,11 +12,11 @@
     /* overflow: scroll; */
   /* } */
 
-  &__global {
+  /* &__global {
     padding-top: 2rem;
     padding-bottom: 2rem;
     width:  900px;
-  }
+  } */
 
   &__languageDisclaimer {
     max-width: 90%;

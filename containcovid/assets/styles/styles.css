@@ -5,7 +5,6 @@
 @import "modules/_buttons";
 @import "modules/_container";
 @import "modules/_navbar";
-@import "modules/_accordion";
 @import "modules/_signatories";
 @import "modules/_carousel_signatories";
 @import "modules/_footer";
@@ -15,3 +14,5 @@
 @import "modules/_statement";
 @import "modules/_globalText";
 @import "modules/_interviews";
+@import "modules/_accordion";
+@import "modules/_languages";

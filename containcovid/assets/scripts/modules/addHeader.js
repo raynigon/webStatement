@@ -5,15 +5,15 @@ function set_statement_lang(language='English',init=false) {
 
     if (document.getElementById("statement")) {
       var language_file = "./languageFiles/statement_"+language+".html"
-      if (init) {
-        $('#statement').load(language_file)
-      }
-      else {
+      // if (init) {
+      //   $('#statement').load(language_file)
+      // }
+      // else {
         $('#statement__title').load(language_file + " #statement__title")
         $('#statement__text').load(language_file + " #statement__text")
         $('#statement__references').load(language_file + " #statement__references")
         $('#statement__translator').load(language_file + " #statement__translator")
-      }
+      // }
     }
     if (document.getElementById("NewsArticle")) {
       var language_file = "./languageFiles/NewsArticle_"+language+".html"
@@ -59,11 +59,8 @@ class addHeaderFooter {
   }
 
   addLangEvents() {
-    console.log('add?')
     waitForElement('#navbarResponsive').then(function(element) {
-      console.log('change lang set')
       $('#dropdown-languages').children().each(function(i,child) {
-        console.log('change lang'+child.text)
         child.onclick = function() {
           set_statement_lang(child.text,false)
         }

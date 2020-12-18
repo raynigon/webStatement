@@ -10,7 +10,7 @@ class generateSignatories {
     var dom_id = "list__signatories_1";
     // new generateSignatories('./data/signatories_initial.csv',dom_id,0,batch_sz);
 
-    for (var i=0; i<6; i++) {
+    for (var i=0; i<7; i++) {
         dom_id = "list__signatories_"+(i+1)
 
         if (i==0) {

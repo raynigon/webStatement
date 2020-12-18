@@ -1,7 +1,7 @@
 .text-statement {
   font-family: Helvetica, sans-serif;
   color: $darkGrey;
-
+  
   &__author {
     font-weight: normal;
     font-size:  0.8rem;
@@ -13,7 +13,7 @@
     &__name:hover {
       color: black;
       text-decoration: underline;
-      font-weight: bold;
+      /* font-weight: bold; */
     }
 
     &__name[title]:after {
@@ -42,28 +42,6 @@
     font-weight: bold;
   }
 
-  &__card {
-    font-size: 1rem;
-    &__highlight {
-      font-weight: bold;
-    }
-
-    @mixin atSmall {
-      font-size: 1.1rem;
-    }
-  }
-
-  &__card-body {
-    font-size: 1rem;
-    &__highlight {
-      font-weight: bold;
-    }
-
-    @mixin atSmall {
-      font-size: 1.2rem;
-    }
-  }
-
   &__title {
     font-size: 1.4rem;
     font-weight: bold;
@@ -73,13 +51,6 @@
     };
   }
 
-  &__card {
-    font-weight: bold;
-    align: left;
-    width:auto;
-    overflow:hidden
-  }
-
   &__callForAction {
     font-size: 1.4rem;
   }
@@ -87,7 +58,12 @@
     font-size: 0.8rem;
     font-style: italic;
   }
+
+  /* a { */
+    /* color: white; */
+  /* } */
 }
+
 
 .ref {
   font-size:  1rem;
@@ -137,4 +113,8 @@
 }
 .list-minor > li:before {
   content: "(" counter(lis, lower-roman) ") ";
+}
+
+.fas-accordion {
+  color: white;
 }

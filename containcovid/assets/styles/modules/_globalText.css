@@ -29,18 +29,33 @@
   }
   &__button:hover {
     color: black;
-    font-weight: bold;
+    /* font-weight: bold; */
   }
 }
 
 .external-link {
   font-weight: bold;
-  color: black;
+  color: $darkBlue;
+  text-decoration: underline;
+}
+.external-link:hover {
+  color: $darkGrey;
+}
+
+.internal-link:hover {
+  color: $darkGrey;
   text-decoration: underline;
 }
 
 .internal-link {
   font-weight: normal;
-  color: $darkGrey;
+  color: $darkBlue;
+  &__contrast {
+    color: $blueWhite;
+  }
   text-decoration: underline;
+  &__contrast:hover {
+    color: $blueWhite;
+    text-decoration: underline white;
+  }
 }

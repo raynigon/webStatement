@@ -1,27 +1,31 @@
-.container {
-  margin: auto;
+.container-lg {
+  padding: 0;
+}
 
-  &__hero {
+.container {
+  /* margin: auto; */
+
+  /* &__hero { */
     /* display: inline-block; */
     /* width: 100%; */
     /* height: 27%; */
     /* overflow: scroll; */
-  }
+  /* } */
 
-  &__global {
+  /* &__global {
     padding-top: 2rem;
     padding-bottom: 2rem;
     width:  900px;
-  }
+  } */
 
   &__languageDisclaimer {
     max-width: 90%;
     padding-bottom: 1rem;
   }
 
-  &__statement {
+  /* &__statement {
     max-width: 90%;
-  }
+  } */
 
   &__references {
     margin-top: 2rem;

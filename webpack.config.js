@@ -60,7 +60,7 @@ if (currentTask == 'dev') {
     },
     contentBase: path.join(__dirname, 'containcovid'),
     hot: true,
-    port: 8080,
+    port: 8081,
     host: '0.0.0.0'
   }
   config.mode = 'development'

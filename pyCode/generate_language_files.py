@@ -1,9 +1,12 @@
+# -*- coding: utf-8 -*-
+
 import pandas as pd
 import copy
+import codecs
 
 def format_text(input_template,output_file,input_csv,keyword,delimiter=';'):
 
-    with open (input_template,"r") as myfile:
+    with codecs.open(input_template,"r", "utf-8") as myfile:
         plain_html = myfile.read()
 
     df = pd.read_csv(input_csv,delimiter=delimiter)
@@ -15,7 +18,7 @@ def format_text(input_template,output_file,input_csv,keyword,delimiter=';'):
                 new_html = new_html.replace('%s_%02d'%(keyword,i),d[language])
             else:
                 new_html = new_html.replace('%s_%02d'%(keyword,i),"")
-        text_file = open("%s_%s.html"%(output_file,language), "w")
+        text_file = codecs.open("%s_%s.html"%(output_file,language), "w", "utf-8")
         text_file.write(new_html)
         text_file.close()
 

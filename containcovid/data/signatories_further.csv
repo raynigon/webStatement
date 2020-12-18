@@ -1,20 +1,21 @@
-Name;Affiliation
-Vytautas Usonis;"""Paediatrician, paediatric infectious diseases"", Clinic of Children Diseases, Vilnius University, Vilnius, Lithuani"
-Costagliola;Senior Researcher, Institut Pierre Louis d'Epidémiologie et de Santé Publique, INSERM and Sorbonne Université, Paris, Franc
-Markus Beier;General Practitioner and Chairman, Bavarian General Practitioner Organisation (BHÄV), German
-Rudi Balling;Systems Biomedicine, Luxembourg Center for Systems Biomedicine, University of Luxembourg, Luxembourg, Luxembour
-Wolfgang Weninger;"""Dermatology, Immunology"", Dermatology, Medical University of Vienna, Vienna, Austri"
-George N. Pavlakis;"Section Chief, Human Retrovirus Section, NCI, ""Frederick, MD"", US"
-Jean-Michel Pawlotsky;"Virologist, Department of Virology, ""Henri Mondor University Hospital, Université Paris-Est & INSERM U955"", Créteil, Franc"
-Jorge Goncalves;Professor/Systems biomedicine, Luxembourg Centre for Systems Biomedicine, University of Luxembourg, Luxembour
-Michael M. Kochen;Emeritus Professor of General Practice (University of Goettingen), Institute of General Practice, University of Freiburg, Baden-Württemberg - Freiburg, Deutschlan
-KARINE LACOMBE;"Professor in medicine, Infectious Diseases Department, ""Sorbonne Université, Hôpital St Antoine, APHP"",75012 - Paris, Franc"
-Peter Willeit;Epidemiologist, Clinical Epidemiology Team, Medical University of Innsbruck, Innsbruck, Austri
-Georg Gottlob;Professor of Computer Science, Department of Computer Science, University of Oxford, Oxford, U
-Timothy SC Hinks;Respiratory immunology, Nuffield Department of Medicine, University of Oxford, Oxford, United Kingdo
-Richard Russel;Respiratory Medicine, Nuffield Department of Medicine, University Of Oxford, Oxford, U
-Emma B Hodcroft;Post-doctoral researcher / molecular epidemiology & virus evolution, Institute of Social and Preventive Medicine, University of Bern, Bern, Switzerlan
-Alex W. Friedrich;Professor of Medical Microbiology, Medical Microbiology and Infection Prevention, University Medical Center Groningen, Groningen, Netherland
-Daan Frenkel;Molecular Simulation, Department of Chemistry, University of Cambridge, Cambridge, United Kingdo
-Peter Slagter;Data analist, Dutch RedTeam, The Netherland
-Bert Slagter;Complexity & uncertainty, Dutch RedTeam, The Netherland
+Name;Affiliation;Country
+Wolfgang Weninger;"""Dermatology, Immunology"", Dermatology, Medical University of Vienna, Vienna"; Austria
+Peter Willeit;Epidemiologist, Clinical Epidemiology Team, Medical University of Innsbruck, Innsbruck; Austria
+Michael M. Kochen;Emeritus Professor of General Practice (University of Goettingen), Institute of General Practice, University of Freiburg, Baden-Württemberg - Freiburg; Deutschland
+Costagliola;Senior Researcher, Institut Pierre Louis d'Epidémiologie et de Santé Publique, INSERM and Sorbonne Université, Paris; France
+Jean-Michel Pawlotsky;"Virologist, Department of Virology, ""Henri Mondor University Hospital, Université Paris-Est & INSERM U955"", Créteil"; France
+KARINE LACOMBE;"Professor in medicine, Infectious Diseases Department, ""Sorbonne Université, Hôpital St Antoine, APHP"",75012 - Paris"; France
+Markus Beier;General Practitioner and Chairman, Bavarian General Practitioner Organisation (BHÄV); Germany
+Vytautas Usonis;"""Paediatrician, paediatric infectious diseases"", Clinic of Children Diseases, Vilnius University, Vilnius"; Lithuania
+Rudi Balling;Systems Biomedicine, Luxembourg Center for Systems Biomedicine, University of Luxembourg, Luxembourg; Luxembourg
+Jorge Goncalves;rofessor/Systems biomedicine, Luxembourg Centre for Systems Biomedicine, University of Luxembourg; Luxembourg
+Alex W. Friedrich;Professor of Medical Microbiology, Medical Microbiology and Infection Prevention, University Medical Center Groningen, Groningen; Netherlands
+Emma B Hodcroft;Post-doctoral researcher / molecular epidemiology & virus evolution, Institute of Social and Preventive Medicine, University of Bern, Bern; Switzerland
+Bert Slagter;Complexity & uncertainty, Dutch RedTeam; The Netherlands
+Peter Slagter;Data analist, Dutch RedTeam; The Netherlands
+Richard Russel;Respiratory Medicine, Nuffield Department of Medicine, University Of Oxford, Oxford; UK
+Georg Gottlob;Professor of Computer Science, Department of Computer Science, University of Oxford, Oxford; UK
+George N. Pavlakis;"Section Chief, Human Retrovirus Section, NCI, ""Frederick, MD"""; USA
+Timothy SC Hinks;Respiratory immunology, Nuffield Department of Medicine, University of Oxford, Oxford; United Kingdom
+Daan Frenkel;Molecular Simulation, Department of Chemistry, University of Cambridge, Cambridge; United Kingdom
+Name;;Name

@@ -1,12 +1,12 @@
 import pandas as pd
 import copy
+import codecs
 
 def add_name(j,row,key_class=""):
     str = '<li class="'+key_class+'">'
-    # print(line['Name'])
     str += '<span>[%d] </span> '%j
     str += '<span class="sign sign__name">'+row.Name.strip()+', </span>'
-    str += ' <span class="sign sign__affiliation">'+row.Affiliation+'</span>'
+    str += ' <span class="sign sign__affiliation">'+row.Affiliation+", "+row.Country+'</span>'
     str += '</li>'
     return str
 
@@ -31,7 +31,7 @@ def format_text(output_file,delimiter=';'):
     #     html_string += add_name(j,row,key_class='signatories-further')
     # html_string += '</ol>\n'
 
-    text_file = open(output_file, "w")
+    text_file = codecs.open(output_file, "w", "utf-8")
     text_file.write(html_string)
     text_file.close()
 

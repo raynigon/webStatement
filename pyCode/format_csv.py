@@ -33,10 +33,22 @@ def create_html(df):
 
 
 def format_csv(input_filename, output_filename):
-    lis = list(range(15))
-    df = pd.read_csv(input_filename, header=None, names=lis)
-    # drop first row
-    df = df.iloc[1:]
+    new_df = pd.DataFrame(columns=["Name", "Affiliation", "Country"])
+    df = pd.read_csv(input_filename, header=None, names=[0], delimiter=";")
+
+    for index, row in df.iterrows():
+        cell_content = row[0]
+        strings = cell_content.split(',')
+        name = strings[0]
+        affiliation = ','.join(strings[1:-1])
+        affiliation = affiliation[1:]
+        country = strings[-1]
+
+        new_df.at[index, "Name"] = name
+        new_df.at[index, "Affiliation"] = affiliation
+        new_df.at[index, "Country"] = country
+
+    """
     # edit rows where data is all in column one
     is_nan = df.isnull()
     problematic_rows = df.loc[is_nan[1] == True]
@@ -44,11 +56,12 @@ def format_csv(input_filename, output_filename):
         cell_content = problematic_rows.loc[index][0]
         strings = cell_content.split(',')
         name = strings[0]
-        affiliation = ','.join(strings[1:])
+        affiliation = ','.join(strings[1:-1])
+        affiliation = affiliation[1:]
+        country = strings[-1]
         df.at[index, 0] = name
-        df.at[index, 1] = affiliation
-
-    new_df = pd.DataFrame(columns=["Name", "Affiliation"])
+        df.at[index, 1] = 0#affiliation
+        df.at[index, 2] = country
 
     # Name column
     new_df[new_df.columns[0]] = df[df.columns[0]]
@@ -75,6 +88,13 @@ def format_csv(input_filename, output_filename):
     new_df[new_df.columns[1]] = new_df[new_df.columns[1]].apply(
         remove_whitespace
         )
+
+    # Country column
+    new_df[new_df.columns[2]] = df[df.columns[2]]
+    """
+
+    # Sort by country
+    new_df = new_df.sort_values(by=["Country"])
 
     # create_html(new_df)
 

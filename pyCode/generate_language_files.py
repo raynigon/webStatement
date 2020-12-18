@@ -6,7 +6,7 @@ import codecs
 
 def format_text(input_template,output_file,input_csv,keyword,delimiter=';'):
 
-    with open (input_template,"r") as myfile:
+    with codecs.open(input_template,"r", "utf-8") as myfile:
         plain_html = myfile.read()
 
     df = pd.read_csv(input_csv,delimiter=delimiter)
